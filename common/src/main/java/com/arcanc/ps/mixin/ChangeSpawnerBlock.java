@@ -40,21 +40,4 @@ public class ChangeSpawnerBlock
             }
         }
     }
-    /*@Inject(at = @At("HEAD"), method = "register", cancellable = true)
-    private static void init(String $$0, Block block, CallbackInfoReturnable<Block> cir)
-    {
-        if (block instanceof SpawnerBlock)
-        {
-            block = new CustomSpawnerBlock(
-                    BlockBehaviour.Properties.of()
-                            .mapColor(MapColor.STONE)
-                            .instrument(NoteBlockInstrument.BASEDRUM)
-                            .requiresCorrectToolForDrops()
-                            .strength(5.0F)
-                            .sound(SoundType.METAL)
-                            .noOcclusion()
-            );
-            cir.setReturnValue(Registry.register(BuiltInRegistries.BLOCK, $$0, block));
-        }
-    }*/
 }

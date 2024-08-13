@@ -1,7 +1,7 @@
-package com.example.examplemod.platform;
+package com.arcanc.ps.platform;
 
-import com.example.examplemod.Constants;
-import com.example.examplemod.platform.services.IPlatformHelper;
+import com.arcanc.ps.Database;
+import com.arcanc.ps.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 
@@ -24,7 +24,7 @@ public class Services {
         final T loadedService = ServiceLoader.load(clazz)
                 .findFirst()
                 .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
-        Constants.LOG.debug("Loaded {} for service {}", loadedService, clazz);
+        Database.LOG.debug("Loaded {} for service {}", loadedService, clazz);
         return loadedService;
     }
 }
